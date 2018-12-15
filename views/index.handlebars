@@ -1,37 +1,41 @@
-<h1>It's Burger Time!</h1>
+<h1 class="text-center">It's Burger Time!</h1>
 
 <div class="jumbotron">
     <div class="row">
         <div class="col-md-6">
-            <div>Click The Burgers to Devour</div>
-            <ul>
-            {{#each burgers}}
-                {{#unless this.devoured}}
-                    <li>
-                        <button class='burgerAvailable' data-id={{this.id}} data-value={{this.burger_name}}> {{this.burger_name}}</button>
-                    </li>
-                {{/unless}}
-            {{/each}}
-            </ul>
+            <div class="text-center">Click The Burgers to Devour</div>
+            <div class="container">
+                <ul>
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                        <li class="list-group">
+                            <button class='burgerAvailable list-group-item list-group-item-success text-center' data-id={{this.id}} data-value={{this.burger_name}}> {{this.burger_name}}</button>
+                        </li>
+                    {{/unless}}
+                {{/each}}
+                </ul>
+            </div>
         </div>
         <div class="col-md-6">
-            <div>Devoured Burgers</div>
-            <ul>
-            {{#each burgers}}
-                {{#if this.devoured}}
-                    <div class="devoured-burgers">
-                        {{this.burger_name}}
-                    </div>
-                {{/if}}
-            {{/each}}
-            </ul>
+            <div class="text-center">Devoured Burgers</div>
+            <div class="container">
+                <ul class="list-group">
+                {{#each burgers}}
+                    {{#if this.devoured}}
+                        <li class="devoured-burgers list-group-item list-group-item-danger text-center">
+                            {{this.burger_name}}
+                        </li>
+                    {{/if}}
+                {{/each}}
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-12">
-            <form>
+            <form class="text-center">
                 <input type="text" id="burg" name="name" placeholder="Burger Name">
-                <button type="submit" class="addBurgerButton">Add The Burger</button>
+                <button type="submit" class="addBurgerButton btn btn-success">Add The Burger</button>
             </form>
         </div>
     </div>

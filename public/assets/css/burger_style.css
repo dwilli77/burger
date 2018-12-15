@@ -1,0 +1,23 @@
+#burger-pic {
+    display: block;
+    margin: 15px auto 15px auto;
+    border-radius: 15px;
+}
+
+body {
+    background-color: #c1553a;
+}
+
+h1 {
+    font-size: 70px;
+    color: #46d66f;
+}
+
+.jumbotron{
+    background-color: #edde57;
+}
+
+.burgerAvailable:hover {
+    cursor: pointer;
+    border: 1px solid #333;
+}
