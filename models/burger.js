@@ -6,13 +6,13 @@ var burger = {
       cb(res);
     });
   },
-  create: function(name, devoured, cb) {
-    orm.create("burgers", "burger_name", "devoured", name, devoured, function(res) {
+  create: function(name, cb) {
+    orm.create("burgers", "burger_name", name, function(res) {
       cb(res);
     });
   },
-  update: function(name, devoured, id, cb) {
-    orm.update("burgers", "burger_name", name, "devoured", devoured, id, function(res) {
+  update: function(id, cb) {
+    orm.update("burgers", "devoured", true, id, function(res) {
       cb(res);
     });
   }
