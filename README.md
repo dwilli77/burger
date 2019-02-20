@@ -9,6 +9,7 @@ This project uses the following technologies:
   * Express
   * node.js
   * MySQL
+  
 It was built using:
   * MVC 
   * custom ORM
