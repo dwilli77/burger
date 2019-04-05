@@ -19,3 +19,5 @@ It was built using:
 Add a burger to the list using the form. 
 
 Click a burger to eat it (move it to the 'devoured' column)
+
+![screenshot](./screenshot.PNG "Burger Time!")
